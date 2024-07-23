@@ -42,8 +42,15 @@ const Page = () => {
     }
   
     // Proceed if all constraints are met
-    const maxSum = findMaxPossibleSumeOfContiguousBalances(array);
-    setResult(maxSum);
+    (async () => {
+      try {
+        const maxSum = await findMaxPossibleSumeOfContiguousBalances(array);
+        setResult(maxSum);
+      } catch (error) {
+        console.error("Failed to calculate max sum:", error);
+        // Handle the error appropriately
+      }
+    })();
   };
 
   return (
