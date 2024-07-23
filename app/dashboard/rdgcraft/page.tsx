@@ -3,7 +3,7 @@
 import { findMaxPossibleSumeOfContiguousBalances } from "@/app/lib/data";
 import React, { useState } from 'react';
 
-const buttonStyle = {
+const buttonStyle: React.CSSProperties = {
   backgroundColor: '#4CAF50', // Green background
   border: 'none',
   color: 'white',
