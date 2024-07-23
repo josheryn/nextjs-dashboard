@@ -215,3 +215,17 @@ export async function fetchFilteredCustomers(query: string) {
     throw new Error('Failed to fetch customer table.');
   }
 }
+
+export async function findMaxPossibleSumeOfContiguousBalances(
+  balances: number[],
+) {
+  let maxSum = 0;
+  let currentSum = 0;
+
+  for (let i = 0; i < balances.length; i++) {
+    currentSum = Math.max(balances[i], currentSum + balances[i]);
+    maxSum = Math.max(maxSum, currentSum);
+  }
+
+  return maxSum;
+}

@@ -22,6 +22,7 @@ const links = [
     icon: DocumentDuplicateIcon,
   },
   { name: 'Customers', href: '/dashboard/customers', icon: UserGroupIcon },
+  { name: 'RDG Craft', href: '/dashboard/rdgcraft', icon: UserGroupIcon },
 ];
 
 export default function NavLinks() {
